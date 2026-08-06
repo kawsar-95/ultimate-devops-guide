@@ -1,0 +1,34 @@
+---
+title: "Scalability and High Availability"
+category: "Scalability and High Availability"
+tags:
+  - devops
+  - scalability-and-high-availability
+  - index
+---
+
+# Scalability and High Availability
+
+Designing systems that grow and stay up: scaling dimensions, load balancing, auto scaling, and recovery objectives.
+
+**5 questions** · 🟢 Beginner: 4 · 🟡 Intermediate: 1 · 🔴 Advanced: 0
+
+## Questions
+
+| #   | Question                                                             | Difficulty      |
+| --- | -------------------------------------------------------------------- | --------------- |
+| 56  | [What is Scalability in DevOps?](./what-is-scalability-in-devops.md) | 🟢 Beginner     |
+| 57  | [What is High Availability?](./what-is-high-availability.md)         | 🟢 Beginner     |
+| 58  | [What is Load Balancing?](./what-is-load-balancing.md)               | 🟢 Beginner     |
+| 59  | [What is Auto Scaling?](./what-is-auto-scaling.md)                   | 🟢 Beginner     |
+| 60  | [What is Disaster Recovery?](./what-is-disaster-recovery.md)         | 🟡 Intermediate |
+
+## What interviewers probe here
+
+- Vertical versus horizontal scaling and the limits of each.
+- Load-balancing algorithms and health checks.
+- The difference between high availability and disaster recovery.
+
+---
+
+[⬅ Back to all topics](../README.md)

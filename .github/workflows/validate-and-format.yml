@@ -1,0 +1,49 @@
+name: Validate and Format Markdown Content
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate content vault
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      # Frontmatter schema, filename slugs, unique IDs, link integrity,
+      # and that no generated index has drifted from the question files.
+      - name: Validate questions, links, and indexes
+        run: python3 scripts/validate_content.py
+
+      - name: Fail if indexes are stale
+        run: python3 scripts/generate_indexes.py --check
+
+  format:
+    name: Check Markdown formatting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Check formatting with Prettier
+        run: npx --yes prettier@3 --check "**/*.md"

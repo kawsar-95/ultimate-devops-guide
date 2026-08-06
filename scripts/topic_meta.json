@@ -1,0 +1,263 @@
+{
+  "core-devops-concepts": {
+    "order": 1,
+    "description": "The vocabulary every DevOps interview opens with: what DevOps actually changes, why it exists, and how CI, continuous delivery, and continuous deployment differ.",
+    "study_notes": [
+      "Can you define DevOps without listing tools?",
+      "The precise boundary between continuous delivery and continuous deployment.",
+      "Which business metrics improve, and how you would measure them."
+    ]
+  },
+  "docker": {
+    "order": 2,
+    "description": "Container fundamentals — images versus containers, Dockerfile authoring, Compose, and the client/daemon architecture underneath `docker run`.",
+    "study_notes": [
+      "Image layers, the build cache, and how to keep images small.",
+      "Why a container is not a virtual machine.",
+      "Multi-stage builds and running as a non-root user."
+    ]
+  },
+  "kubernetes": {
+    "order": 3,
+    "description": "The control plane, the workload objects you touch daily, and the networking abstractions that make Pods reachable.",
+    "study_notes": [
+      "What each control-plane component does when you run `kubectl apply`.",
+      "Service types and when each is appropriate.",
+      "Why Pods are ephemeral and what that implies for state."
+    ]
+  },
+  "cicd": {
+    "order": 4,
+    "description": "Pipeline design, Jenkins and GitLab CI mechanics, and the delivery-versus-deployment distinction interviewers love to test.",
+    "study_notes": [
+      "Stages of a pipeline you have actually built, in order.",
+      "How you keep pipelines fast and trustworthy.",
+      "Where secrets and artifacts live in your pipeline."
+    ]
+  },
+  "cloud-platforms": {
+    "order": 5,
+    "description": "Cloud service models and the three major providers — enough breadth to discuss AWS, Azure, and GCP comparatively.",
+    "study_notes": [
+      "IaaS / PaaS / SaaS boundaries and the shared responsibility model.",
+      "Equivalent services across AWS, Azure, and GCP.",
+      "Regions, availability zones, and how they shape architecture."
+    ]
+  },
+  "infrastructure-as-code": {
+    "order": 6,
+    "description": "Declarative infrastructure with Terraform and Ansible — state, providers, idempotency, and where each tool belongs.",
+    "study_notes": [
+      "Provisioning versus configuration management.",
+      "How you manage Terraform state safely in a team.",
+      "What makes a change idempotent."
+    ]
+  },
+  "monitoring-and-logging": {
+    "order": 7,
+    "description": "Metrics, logs, and the toolchain — Prometheus, Grafana, and the ELK stack — plus the conceptual split between monitoring and logging.",
+    "study_notes": [
+      "Pull versus push metric collection.",
+      "What you alert on versus what you only dashboard.",
+      "How logs get from a container to a searchable index."
+    ]
+  },
+  "security-and-compliance": {
+    "order": 8,
+    "description": "Shifting security left: DevSecOps practice, infrastructure and container hardening, and compliance expressed as code.",
+    "study_notes": [
+      "Where security gates belong in a pipeline, and what fails the build.",
+      "How you handle secrets and image vulnerabilities.",
+      "Turning a control framework into automated checks."
+    ]
+  },
+  "linux-administration": {
+    "order": 9,
+    "description": "The operating system under everything — commands, shell scripting, systemd, service management, and the filesystem hierarchy.",
+    "study_notes": [
+      "Diagnosing a slow or full host from the shell alone.",
+      "Writing a safe, idempotent shell script.",
+      "How systemd starts, supervises, and logs a service."
+    ]
+  },
+  "version-control": {
+    "order": 10,
+    "description": "Git mechanics and the branching models teams actually argue about, including how to resolve conflicts calmly.",
+    "study_notes": [
+      "Git Flow versus trunk-based development, and which suits continuous deployment.",
+      "Merge versus rebase, and when each is safe.",
+      "How you recover from a bad merge or a force push."
+    ]
+  },
+  "configuration-management": {
+    "order": 11,
+    "description": "Keeping fleets consistent with Puppet, Chef, Ansible, and Salt — push versus pull, agent versus agentless.",
+    "study_notes": [
+      "Desired state, drift, and convergence.",
+      "Trade-offs between the major tools.",
+      "Where configuration management ends and immutable infrastructure begins."
+    ]
+  },
+  "scalability-and-high-availability": {
+    "order": 12,
+    "description": "Designing systems that grow and stay up: scaling dimensions, load balancing, auto scaling, and recovery objectives.",
+    "study_notes": [
+      "Vertical versus horizontal scaling and the limits of each.",
+      "Load-balancing algorithms and health checks.",
+      "The difference between high availability and disaster recovery."
+    ]
+  },
+  "backup-and-disaster-recovery": {
+    "order": 13,
+    "description": "Backup types, RPO/RTO targets, business continuity planning, and the discipline of testing restores.",
+    "study_notes": [
+      "The 3-2-1 rule and why an untested backup is not a backup.",
+      "Deriving RPO and RTO from business requirements.",
+      "Costs and trade-offs of DR patterns from backup-restore to active-active."
+    ]
+  },
+  "cloud-native-architecture": {
+    "order": 14,
+    "description": "Microservices, service mesh, event-driven design, and the Twelve-Factor principles that make apps portable.",
+    "study_notes": [
+      "When a microservice split helps and when it hurts.",
+      "How a mesh changes the responsibilities of application code.",
+      "Config, state, and logs as Twelve-Factor treats them."
+    ]
+  },
+  "performance-testing": {
+    "order": 15,
+    "description": "Load, stress, soak, and spike testing — how to design them, which tools to use, and how to read the results.",
+    "study_notes": [
+      "Percentiles versus averages when reporting latency.",
+      "How you build a realistic workload model.",
+      "Turning a test result into a capacity decision."
+    ]
+  },
+  "api-gateway-and-service-mesh": {
+    "order": 16,
+    "description": "The API edge: gateway responsibilities, security, rate limiting, and documentation as a first-class artifact.",
+    "study_notes": [
+      "Gateway versus load balancer versus service mesh.",
+      "Token-bucket rate limiting and how limits are communicated to clients.",
+      "OAuth 2.0, OIDC, and where validation happens."
+    ]
+  },
+  "container-orchestration-advanced": {
+    "order": 17,
+    "description": "Beyond Deployments — StatefulSets, DaemonSets, Helm packaging, Istio, and the container runtime interface.",
+    "study_notes": [
+      "Why stateful workloads need stable identity and storage.",
+      "How Helm templating and releases work, including rollback.",
+      "What replaced Docker as the kubelet's runtime, and why."
+    ]
+  },
+  "devops-tools-and-automation": {
+    "order": 18,
+    "description": "GitOps with Argo CD, Tekton pipelines, and the deployment strategies used to ship without downtime.",
+    "study_notes": [
+      "Push-based CD versus pull-based GitOps reconciliation.",
+      "Choosing between blue/green, canary, and rolling deploys.",
+      "How drift is detected and corrected automatically."
+    ]
+  },
+  "cloud-cost-optimization": {
+    "order": 19,
+    "description": "Reserved and spot capacity, tagging discipline, and the reports that turn a cloud bill into accountable engineering work.",
+    "study_notes": [
+      "Commitment options and their break-even points.",
+      "Designing workloads that tolerate spot interruption.",
+      "Making cost visible to the teams that create it."
+    ]
+  },
+  "site-reliability-engineering-sre": {
+    "order": 20,
+    "description": "Google's operational model: SLIs, SLOs, error budgets, and the systematic elimination of toil.",
+    "study_notes": [
+      "Writing an SLI that reflects user experience.",
+      "What an exhausted error budget should actually change.",
+      "Which work counts as toil and how you cap it."
+    ]
+  },
+  "devops-metrics-and-kpis": {
+    "order": 21,
+    "description": "The four DORA metrics and the measurement habits that keep them honest.",
+    "study_notes": [
+      "Definitions of deployment frequency, lead time, change failure rate, and MTTR.",
+      "How teams game each metric, and how to prevent it.",
+      "Which metric you would improve first, and why."
+    ]
+  },
+  "serverless-architecture": {
+    "order": 22,
+    "description": "Functions as a service, the operational model behind them, and the design patterns that keep serverless workloads fast and cheap.",
+    "study_notes": [
+      "Cold starts and how to mitigate them.",
+      "Statelessness, idempotency, and event-source semantics.",
+      "When serverless is the wrong choice."
+    ]
+  },
+  "database-management-in-devops": {
+    "order": 23,
+    "description": "Treating schemas as code: version control, migration tooling, backup strategy, and performance tuning.",
+    "study_notes": [
+      "Running an online schema change with zero downtime.",
+      "Expand/contract migrations and backward compatibility.",
+      "Reading a slow query plan and acting on it."
+    ]
+  },
+  "network-security": {
+    "order": 24,
+    "description": "Zero trust, TLS, web application firewalls, and segmentation — the controls that protect traffic in and between clouds.",
+    "study_notes": [
+      "The TLS handshake and what certificate validation proves.",
+      "Zero trust as an architecture, not a product.",
+      "Segmentation at the network and Kubernetes-policy levels."
+    ]
+  },
+  "incident-management": {
+    "order": 25,
+    "description": "Detection through post-mortem: response plans, severity levels, on-call practice, and blameless learning.",
+    "study_notes": [
+      "Roles during an incident and who declares severity.",
+      "What a good post-mortem produces beyond a document.",
+      "Designing an on-call rotation people can sustain."
+    ]
+  },
+  "devops-culture-and-practices": {
+    "order": 26,
+    "description": "The human half of DevOps — shared ownership, blamelessness, knowledge sharing, and collaboration that survives incidents.",
+    "study_notes": [
+      "How you would change a team that treats operations as someone else's job.",
+      "Making a post-incident review genuinely blameless.",
+      "Documentation practices that outlive their authors."
+    ]
+  },
+  "infrastructure-monitoring": {
+    "order": 27,
+    "description": "Host and platform monitoring, APM, log management, and the practices that keep dashboards and alerts useful.",
+    "study_notes": [
+      "The USE and RED methods for choosing what to measure.",
+      "Distributed tracing and where it beats logs.",
+      "Alert fatigue and how to design it away."
+    ]
+  },
+  "cloud-migration": {
+    "order": 28,
+    "description": "Assessment, the 6 Rs, application modernization, and the tooling that moves workloads without surprises.",
+    "study_notes": [
+      "Picking a migration strategy per application, not per portfolio.",
+      "How you cut over with minimal downtime and a rollback plan.",
+      "Discovery and dependency mapping before any move."
+    ]
+  },
+  "advanced-devops-cloud": {
+    "order": 29,
+    "description": "Senior-level ground: platform engineering, FinOps, policy as code, chaos engineering, observability, and progressive delivery.",
+    "study_notes": [
+      "Treating the internal platform as a product with users.",
+      "Designing a chaos experiment with a hypothesis and a blast radius.",
+      "Automating governance so policy is enforced, not asked for."
+    ]
+  }
+}
